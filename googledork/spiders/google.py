@@ -18,9 +18,9 @@ class GoogleSpider(scrapy.Spider):
     def parse(self, response):
         for i in response.xpath("//div[@class='ZINbbc xpd O9g5cc uUPGi']"):
             yield{
-                "baslik":i.xpath(".//div[@class='BNeawe vvjwJb AP7Wnd']/text()").get(),
+                "header":i.xpath(".//div[@class='BNeawe vvjwJb AP7Wnd']/text()").get(),
                 "url":i.xpath(".//div[@class='kCrYT']/a/@href").get(),
-                "tarih":i.xpath(".//span[@class='xUrNXd UMOHqf']/text()").get()
+                "date":i.xpath(".//span[@class='xUrNXd UMOHqf']/text()").get()
             }
         next_page2=response.xpath("//a[@class='nBDE1b G5eFlf'][contains(@style,'text-align:left')]/@href").get()
         before_page=response.xpath("//a[@class='nBDE1b G5eFlf'][contains(@style,'text-align:right')]/@href").get()
