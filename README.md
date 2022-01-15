@@ -2,7 +2,7 @@
 This is a simple google search results crawler.
 
 <h3>Requirements</h3>
-You may install scrapy <pre><code>pip install scrapy</code></pre>
+Install scrapy <pre><code>pip install scrapy</code></pre>
 
 <h3>How To Use</h3>
 
